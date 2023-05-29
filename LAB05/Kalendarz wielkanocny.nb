@@ -1,0 +1,479 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19939,        469]
+NotebookOptionsPosition[     19508,        453]
+NotebookOutlinePosition[     19851,        468]
+CellTagsIndexPosition[     19808,        465]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"validdays1", "=", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"m1", "\[Equal]", "2"}], ",", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Mod", "[", 
+              RowBox[{"y1", ",", "4"}], "]"}], "\[Equal]", "0"}], ")"}], "&&", 
+           RowBox[{"(", 
+            RowBox[{"Not", "[", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Mod", "[", 
+                  RowBox[{"y1", ",", "100"}], "]"}], "\[Equal]", "0"}], ")"}],
+                "&&", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Mod", "[", 
+                  RowBox[{"y1", ",", "400"}], "]"}], "\[NotEqual]", "0"}], 
+                ")"}]}], ")"}], "]"}], ")"}]}], ")"}], ",", "29", ",", "28"}],
+         "]"}], ",", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"m1", "\[Equal]", "4"}], "||", 
+           RowBox[{"m1", "\[Equal]", "6"}], "||", 
+           RowBox[{"m1", "\[Equal]", "9"}], "||", 
+           RowBox[{"m1", "\[Equal]", "11"}]}], ")"}], ",", "30", ",", "31"}], 
+        "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"validdays2", "=", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"m2", "\[Equal]", "2"}], ",", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Mod", "[", 
+              RowBox[{"y2", ",", "4"}], "]"}], "\[Equal]", "0"}], ")"}], "&&", 
+           RowBox[{"(", 
+            RowBox[{"Not", "[", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Mod", "[", 
+                  RowBox[{"y2", ",", "100"}], "]"}], "\[Equal]", "0"}], ")"}],
+                "&&", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Mod", "[", 
+                  RowBox[{"y2", ",", "400"}], "]"}], "\[NotEqual]", "0"}], 
+                ")"}]}], ")"}], "]"}], ")"}]}], ")"}], ",", "29", ",", "28"}],
+         "]"}], ",", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"m2", "\[Equal]", "4"}], "||", 
+           RowBox[{"m2", "\[Equal]", "6"}], "||", 
+           RowBox[{"m2", "\[Equal]", "9"}], "||", 
+           RowBox[{"m2", "\[Equal]", "11"}]}], ")"}], ",", "30", ",", "31"}], 
+        "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"d1", ">", "validdays1"}], ",", 
+      RowBox[{"d1", "=", "validdays1"}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"d2", ">", "validdays2"}], ",", 
+      RowBox[{"d2", "=", "validdays2"}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Pane", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Quiet", "@", 
+       RowBox[{"Text", "@", 
+        RowBox[{"Column", "[", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{"\"\<day of the week is: \>\"", ",", 
+              RowBox[{"DayName", "[", 
+               RowBox[{"{", 
+                RowBox[{"y1", ",", "m1", ",", " ", "d1"}], "}"}], "]"}]}], 
+             "}"}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Jewish date is: \>\"", ",", " ", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"DateString", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "\"\<MonthName\>\"", ",", "\"\< \>\"", ",", 
+                    "\"\<DayShort\>\"", ",", "\"\<, \>\"", ",", 
+                    "\"\<Year\>\""}], "}"}]}], "]"}], "&"}], "@", 
+               RowBox[{"Calendar`CalendarChange", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"y1", ",", "m1", ",", "d1"}], "}"}], ",", 
+                 "Calendar`Gregorian", ",", " ", "Calendar`Jewish"}], 
+                "]"}]}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Islamic date is: \>\"", " ", ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"DateString", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "\"\<MonthName\>\"", ",", "\"\< \>\"", ",", 
+                    "\"\<DayShort\>\"", ",", "\"\<, \>\"", ",", 
+                    "\"\<Year\>\""}], "}"}]}], "]"}], "&"}], "@", 
+               RowBox[{"Calendar`CalendarChange", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"y1", ",", "m1", ",", "d1"}], "}"}], ",", 
+                 "Calendar`Gregorian", ",", "Calendar`Islamic"}], "]"}]}]}], 
+             "}"}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Julian date is: \>\"", " ", ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"DateString", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "\"\<MonthName\>\"", ",", "\"\< \>\"", ",", 
+                    "\"\<DayShort\>\"", ",", "\"\<, \>\"", ",", 
+                    "\"\<Year\>\""}], "}"}]}], "]"}], "&"}], "@", 
+               RowBox[{"Calendar`CalendarChange", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"y1", ",", "m1", ",", "d1"}], "}"}], ",", 
+                 "Calendar`Gregorian", ",", " ", "Calendar`Julian"}], 
+                "]"}]}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{"\"\<days added: \>\"", " ", ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"DateString", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "\"\<MonthName\>\"", ",", "\"\< \>\"", ",", 
+                    "\"\<DayShort\>\"", ",", "\"\<, \>\"", ",", 
+                    "\"\<Year\>\""}], "}"}]}], "]"}], "&"}], "@", 
+               RowBox[{"DayPlus", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"y1", ",", "m1", ",", "d1"}], "}"}], ",", "dp"}], 
+                "]"}]}]}], "}"}], "]"}], ",", "\"\<\>\"", ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Easter day: \>\"", " ", ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"DateString", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "\"\<MonthName\>\"", ",", "\"\< \>\"", ",", 
+                    "\"\<DayShort\>\"", ",", "\"\<, \>\"", ",", 
+                    "\"\<Year\>\""}], "}"}]}], "]"}], "&"}], "@", 
+               RowBox[{"Calendar`EasterSunday", "[", "y1", "]"}]}]}], "}"}], 
+            "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Greek Easter: \>\"", " ", ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"DateString", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "\"\<MonthName\>\"", ",", "\"\< \>\"", ",", 
+                    "\"\<DayShort\>\"", ",", "\"\<, \>\"", ",", 
+                    "\"\<Year\>\""}], "}"}]}], "]"}], "&"}], "@", 
+               RowBox[{
+               "Calendar`EasterSundayGreekOrthodox", "[", "y1", "]"}]}]}], 
+             "}"}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Jewish New Year: \>\"", ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"DateString", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "\"\<MonthName\>\"", ",", "\"\< \>\"", ",", 
+                    "\"\<DayShort\>\"", ",", "\"\<, \>\"", ",", 
+                    "\"\<Year\>\""}], "}"}]}], "]"}], "&"}], "@", 
+               RowBox[{"Calendar`JewishNewYear", "[", "y1", "]"}]}]}], "}"}], 
+            "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{"\"\<days between: \>\"", " ", ",", 
+              RowBox[{"DayCount", " ", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"y1", ",", "m1", ",", "d1"}], "}"}], ",", " ", 
+                RowBox[{"{", 
+                 RowBox[{"y2", ",", "m2", ",", "d2"}], "}"}]}], "]"}]}], 
+             "}"}], "]"}]}], "}"}], "]"}]}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"200", ",", "185"}], "}"}]}], "]"}]}], ",", 
+   "\[IndentingNewLine]", "\"\<first date\>\"", ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"m1", ",", "1", ",", "\"\<month\>\""}], "}"}], ",", "1", ",", 
+     "12", ",", "1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d1", ",", "21", ",", "\"\<day\>\""}], "}"}], ",", "1", ",", 
+     RowBox[{"Dynamic", "@", "validdays1"}], ",", "1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"y1", ",", "1945", ",", "\"\<year\>\""}], "}"}], ",", "1400", 
+     ",", "2050", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"dp", ",", "30", ",", " ", "\"\<days added\>\""}], "}"}], ",", 
+     "1", ",", " ", "2000", ",", "1", ",", 
+     RowBox[{"Appearance", " ", "\[Rule]", " ", "\"\<Labeled\>\""}]}], "}"}], 
+   ",", "\[IndentingNewLine]", "\"\<second date\>\"", ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"m2", ",", "9", ",", "\"\<month\>\""}], "}"}], ",", "1", ",", 
+     "12", ",", "1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d2", ",", "18", ",", "\"\<day\>\""}], "}"}], ",", "1", ",", 
+     RowBox[{"Dynamic", "@", "validdays2"}], ",", "1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"y2", ",", "1948", ",", "\"\<year\>\""}], "}"}], ",", "1400", 
+     ",", "2050", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Initialization", "\[RuleDelayed]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"validdays1", "=", 
+       RowBox[{"validdays2", "=", "31"}]}], ";", 
+      RowBox[{"Get", "[", "\"\<Calendar`\>\"", "]"}], ";"}], "}"}]}]}], 
+  "]"}]], "Input",
+ CellLabel->
+  "(Debug) In[47]:=",ExpressionUUID->"17c8d8ae-ee43-45d0-be3e-11e03a3f9002"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`d1$$ = 21, $CellContext`d2$$ = 
+    18, $CellContext`dp$$ = 30, $CellContext`m1$$ = 1, $CellContext`m2$$ = 
+    9, $CellContext`y1$$ = 1945, $CellContext`y2$$ = 1948, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold["first date"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`m1$$], 1, "month"}, 1, 12, 1}, {{
+       Hold[$CellContext`d1$$], 21, "day"}, 1, 
+      Dynamic[$CellContext`validdays1], 1}, {{
+       Hold[$CellContext`y1$$], 1945, "year"}, 1400, 2050, 1}, {{
+       Hold[$CellContext`dp$$], 30, "days added"}, 1, 2000, 1}, {
+      Hold["second date"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`m2$$], 9, "month"}, 1, 12, 1}, {{
+       Hold[$CellContext`d2$$], 18, "day"}, 1, 
+      Dynamic[$CellContext`validdays2], 1}, {{
+       Hold[$CellContext`y2$$], 1948, "year"}, 1400, 2050, 1}}, 
+    Typeset`size$$ = {200., {89., 96.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`m1$31195$$ = 0, $CellContext`d1$31196$$ = 
+    0, $CellContext`y1$31197$$ = 0, $CellContext`dp$31198$$ = 
+    0, $CellContext`m2$31199$$ = 0, $CellContext`d2$31200$$ = 
+    0, $CellContext`y2$31201$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`d1$$ = 21, $CellContext`d2$$ = 
+        18, $CellContext`dp$$ = 30, $CellContext`m1$$ = 1, $CellContext`m2$$ = 
+        9, $CellContext`y1$$ = 1945, $CellContext`y2$$ = 1948}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`m1$$, $CellContext`m1$31195$$, 0], 
+        Hold[$CellContext`d1$$, $CellContext`d1$31196$$, 0], 
+        Hold[$CellContext`y1$$, $CellContext`y1$31197$$, 0], 
+        Hold[$CellContext`dp$$, $CellContext`dp$31198$$, 0], 
+        Hold[$CellContext`m2$$, $CellContext`m2$31199$$, 0], 
+        Hold[$CellContext`d2$$, $CellContext`d2$31200$$, 0], 
+        Hold[$CellContext`y2$$, $CellContext`y2$31201$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`validdays1 = If[$CellContext`m1$$ == 2, 
+          If[
+           And[Mod[$CellContext`y1$$, 4] == 0, 
+            Not[
+             And[
+             Mod[$CellContext`y1$$, 100] == 0, Mod[$CellContext`y1$$, 400] != 
+              0]]], 29, 28], 
+          If[
+           
+           Or[$CellContext`m1$$ == 4, $CellContext`m1$$ == 
+            6, $CellContext`m1$$ == 9, $CellContext`m1$$ == 11], 30, 
+           31]]; $CellContext`validdays2 = If[$CellContext`m2$$ == 2, 
+          If[
+           And[Mod[$CellContext`y2$$, 4] == 0, 
+            Not[
+             And[
+             Mod[$CellContext`y2$$, 100] == 0, Mod[$CellContext`y2$$, 400] != 
+              0]]], 29, 28], 
+          If[
+           
+           Or[$CellContext`m2$$ == 4, $CellContext`m2$$ == 
+            6, $CellContext`m2$$ == 9, $CellContext`m2$$ == 11], 30, 31]]; 
+       If[$CellContext`d1$$ > $CellContext`validdays1, $CellContext`d1$$ = \
+$CellContext`validdays1]; 
+       If[$CellContext`d2$$ > $CellContext`validdays2, $CellContext`d2$$ = \
+$CellContext`validdays2]; Pane[
+         Quiet[
+          Text[
+           Column[{
+             Row[{"day of the week is: ", 
+               
+               DayName[{$CellContext`y1$$, $CellContext`m1$$, \
+$CellContext`d1$$}]}], 
+             Row[{"Jewish date is: ", 
+               (DateString[#, {"MonthName", " ", "DayShort", ", ", "Year"}]& )[
+                
+                Calendar`CalendarChange[{$CellContext`y1$$, \
+$CellContext`m1$$, $CellContext`d1$$}, Calendar`Gregorian, 
+                 Calendar`Jewish]]}], 
+             Row[{"Islamic date is: ", 
+               (DateString[#, {"MonthName", " ", "DayShort", ", ", "Year"}]& )[
+                
+                Calendar`CalendarChange[{$CellContext`y1$$, \
+$CellContext`m1$$, $CellContext`d1$$}, Calendar`Gregorian, 
+                 Calendar`Islamic]]}], 
+             Row[{"Julian date is: ", 
+               (DateString[#, {"MonthName", " ", "DayShort", ", ", "Year"}]& )[
+                
+                Calendar`CalendarChange[{$CellContext`y1$$, \
+$CellContext`m1$$, $CellContext`d1$$}, Calendar`Gregorian, 
+                 Calendar`Julian]]}], 
+             Row[{"days added: ", 
+               (DateString[#, {"MonthName", " ", "DayShort", ", ", "Year"}]& )[
+                
+                DayPlus[{$CellContext`y1$$, $CellContext`m1$$, \
+$CellContext`d1$$}, $CellContext`dp$$]]}], "", 
+             Row[{"Easter day: ", 
+               (DateString[#, {"MonthName", " ", "DayShort", ", ", "Year"}]& )[
+                Calendar`EasterSunday[$CellContext`y1$$]]}], 
+             Row[{"Greek Easter: ", 
+               (DateString[#, {"MonthName", " ", "DayShort", ", ", "Year"}]& )[
+                Calendar`EasterSundayGreekOrthodox[$CellContext`y1$$]]}], 
+             Row[{"Jewish New Year: ", 
+               (DateString[#, {"MonthName", " ", "DayShort", ", ", "Year"}]& )[
+                Calendar`JewishNewYear[$CellContext`y1$$]]}], 
+             Row[{"days between: ", 
+               
+               DayCount[{$CellContext`y1$$, $CellContext`m1$$, \
+$CellContext`d1$$}, {$CellContext`y2$$, $CellContext`m2$$, \
+$CellContext`d2$$}]}]}]]], {200, 185}]), 
+      "Specifications" :> {
+       "first date", {{$CellContext`m1$$, 1, "month"}, 1, 12, 1, ImageSize -> 
+         Tiny, Appearance -> "Labeled"}, {{$CellContext`d1$$, 21, "day"}, 1, 
+         Dynamic[$CellContext`validdays1], 1, ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`y1$$, 1945, "year"}, 1400, 2050, 1, 
+         Appearance -> "Labeled"}, {{$CellContext`dp$$, 30, "days added"}, 1, 
+         2000, 1, Appearance -> "Labeled"}, 
+        "second date", {{$CellContext`m2$$, 9, "month"}, 1, 12, 1, ImageSize -> 
+         Tiny, Appearance -> "Labeled"}, {{$CellContext`d2$$, 18, "day"}, 1, 
+         Dynamic[$CellContext`validdays2], 1, ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`y2$$, 1948, "year"}, 1400, 2050, 1, 
+         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{579., {121., 127.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`validdays1 = ($CellContext`validdays2 = 
+         31); Get["Calendar`"]; Null}; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.888772866606675*^9},
+ CellLabel->
+  "(Debug) Out[47]=",ExpressionUUID->"9adba66e-7416-48e2-bd16-cc0a01fcb880"]
+}, Open  ]]
+},
+WindowSize->{759, 813},
+WindowMargins->{{Automatic, 572}, {64, Automatic}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 11721, 285, 1396, "Input",ExpressionUUID->"17c8d8ae-ee43-45d0-be3e-11e03a3f9002"],
+Cell[12304, 309, 7188, 141, 314, "Output",ExpressionUUID->"9adba66e-7416-48e2-bd16-cc0a01fcb880"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

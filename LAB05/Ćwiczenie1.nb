@@ -1,0 +1,340 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12144,        330]
+NotebookOptionsPosition[      9995,        294]
+NotebookOutlinePosition[     10338,        309]
+CellTagsIndexPosition[     10295,        306]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"\[CapitalCAcute]wiczenie", " ", "1."}], ":", 
+    RowBox[{"1.", " ", "Wykorzystuj\:0105c", " ", 
+     RowBox[{"np", ".", "program"}], " ", "Mathematica", " ", 
+     "wyznaczy\[CAcute]", " ", "dat\:0119", " ", "Wielkanocy", " ", "w", " ", 
+     "2016", " ", "roku", "\n", "korzystaj\:0105c", " ", "z", " ", 
+     "algorytmu", " ", "Gaussa", " ", "dla", " ", "kalendarza", " ", 
+     RowBox[{"gregoria\:0144skiego", ".", 
+      RowBox[{
+       RowBox[{"UWAGA", "!!"}], "!"}]}], "\n", 
+     RowBox[{"Mod", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], " ", "w", " ", "Mathematice", " ", 
+     "oznacza", " ", "reszt\:0119", " ", "z", " ", "dzielenia", " ", "liczby",
+      " ", "x", " ", "przez", " ", "y"}]}], "*)"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.8893746529577646`*^9, 
+  3.889374659024355*^9}},ExpressionUUID->"e9948fb3-a5b4-4280-8863-\
+35b3448fe4da"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"a", "=", 
+  RowBox[{"Mod", "[", 
+   RowBox[{"2016", ",", "19"}], "]"}]}], "\n", 
+ RowBox[{"b", "=", 
+  RowBox[{"Mod", "[", 
+   RowBox[{"2016", ",", "4"}], "]"}]}], "\n", 
+ RowBox[{"c", "=", 
+  RowBox[{"Mod", "[", 
+   RowBox[{"2016", ",", "7"}], "]"}]}], "\n", 
+ RowBox[{"d", "=", 
+  RowBox[{"Mod", "[", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"19", "*", "a"}], "+", "24"}], ")"}], ",", "30"}], 
+   "]"}]}], "\n", 
+ RowBox[{"e", "=", 
+  RowBox[{"Mod", "[", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", "*", "b"}], "+", 
+      RowBox[{"4", "*", "c"}], "+", 
+      RowBox[{"6", "*", "d"}], "+", "5"}], ")"}], ",", "7"}], "]"}]}], "\n", 
+ RowBox[{"day", "=", 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"d", "+", "e"}], ")"}], ">", "9"}], ",", 
+    RowBox[{"(", 
+     RowBox[{"d", "+", "e", "-", "9"}], ")"}], ",", 
+    RowBox[{"(", 
+     RowBox[{"d", "+", "e", "+", "22"}], ")"}]}], "]"}]}], "\n", 
+ RowBox[{"month", "=", 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"d", "+", "e"}], ")"}], ">", "9"}], ",", "4", ",", "3"}], 
+   "]"}]}], "\n", 
+ RowBox[{"DateObject", "[", 
+  RowBox[{"{", 
+   RowBox[{"2016", ",", "month", ",", "day"}], "}"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8893748135393143`*^9, 3.889374813543317*^9}},
+ CellLabel->
+  "(Debug) In[37]:=",ExpressionUUID->"9a851fa0-4827-47ed-8ddf-723906de41e5"],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.8893748145336947`*^9},
+ CellLabel->
+  "(Debug) Out[37]=",ExpressionUUID->"3d76cadb-e2e9-458e-8c43-2252a0565bf9"],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.889374814535694*^9},
+ CellLabel->
+  "(Debug) Out[38]=",ExpressionUUID->"db2c789f-6a6d-4233-98cc-0ada8f1df986"],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.889374814537695*^9},
+ CellLabel->
+  "(Debug) Out[39]=",ExpressionUUID->"825b972c-6991-4bb0-80fa-d25ddf9b14e8"],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.889374814540695*^9},
+ CellLabel->
+  "(Debug) Out[40]=",ExpressionUUID->"2224fc17-57f0-4c1e-b20c-10e5cbb2f408"],
+
+Cell[BoxData["3"], "Output",
+ CellChangeTimes->{3.889374814543697*^9},
+ CellLabel->
+  "(Debug) Out[41]=",ExpressionUUID->"944dcef7-5e61-458f-8db8-16a834188ffd"],
+
+Cell[BoxData["27"], "Output",
+ CellChangeTimes->{3.8893748145466967`*^9},
+ CellLabel->
+  "(Debug) Out[42]=",ExpressionUUID->"45f10f92-bc56-4228-bdd3-1e2bb8b0b919"],
+
+Cell[BoxData["3"], "Output",
+ CellChangeTimes->{3.8893748145486975`*^9},
+ CellLabel->
+  "(Debug) Out[43]=",ExpressionUUID->"0513db2e-69b0-465e-9698-12eac121a1db"],
+
+Cell[BoxData[
+ TemplateBox[{RowBox[{
+     StyleBox["\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+     "\"Sun 27 Mar 2016\""}],RowBox[{"DateObject", "[", 
+     RowBox[{
+       RowBox[{"{", 
+         RowBox[{"2016", ",", "3", ",", "27"}], "}"}], ",", "\"Day\"", ",", 
+       "\"Gregorian\"", ",", "2.`"}], "]"}]},
+  "DateObject",
+  Editable->False]], "Output",
+ CellChangeTimes->{3.8893748145516977`*^9},
+ CellLabel->
+  "(Debug) Out[44]=",ExpressionUUID->"bf16a3c2-ea4e-41d7-97ea-2e421f8bacf7"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "Wynik", " ", "to", " ", "data", " ", "Wielkanocy", " ", "w", " ", "2016", 
+   " ", 
+   RowBox[{"roku", ":", 
+    RowBox[{"\"\<27 marca 2016\>\"", "."}]}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.8893748736751566`*^9, 
+  3.889374877135068*^9}},ExpressionUUID->"9badb5a7-fb44-4f38-8e91-\
+c32761e1ccfc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Definiujemy", " ", "zmienn\:0105", " ", "\"\<a\>\"", " ", "jako", " ", 
+    "reszt\:0119", " ", "z", " ", "dzielenia", " ", "roku", " ", "przez", " ",
+     "19"}], "*)"}], 
+  RowBox[{
+   RowBox[{"a", "=", 
+    RowBox[{"Mod", "[", 
+     RowBox[{"2016", ",", "19"}], "]"}]}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Definiujemy", " ", "zmienn\:0105", " ", "\"\<b\>\"", " ", "jako", " ", 
+     "reszt\:0119", " ", "z", " ", "dzielenia", " ", "roku", " ", "przez", 
+     " ", "4"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"b", "=", 
+    RowBox[{"Mod", "[", 
+     RowBox[{"2016", ",", "4"}], "]"}]}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Definiujemy", " ", "zmienn\:0105", " ", "\"\<c\>\"", " ", "jako", " ", 
+     "reszt\:0119", " ", "z", " ", "dzielenia", " ", "roku", " ", "przez", 
+     " ", "7"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"c", "=", 
+    RowBox[{"Mod", "[", 
+     RowBox[{"2016", ",", "7"}], "]"}]}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Definiujemy", " ", "zmienn\:0105", " ", "\"\<d\>\"", " ", "zgodnie", " ",
+      "z", " ", "algorytmem", " ", "Gaussa"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"d", "=", 
+    RowBox[{"Mod", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"19", "*", "a"}], "+", "24"}], ")"}], ",", "30"}], "]"}]}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Definiujemy", " ", "zmienn\:0105", " ", "\"\<e\>\"", " ", "zgodnie", " ",
+      "z", " ", "algorytmem", " ", "Gaussa"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"e", "=", 
+    RowBox[{"Mod", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "*", "b"}], "+", 
+        RowBox[{"4", "*", "c"}], "+", 
+        RowBox[{"6", "*", "d"}], "+", "5"}], ")"}], ",", "7"}], "]"}]}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Definiujemy", " ", "zmienn\:0105", " ", "\"\<day\>\"", " ", "jako", " ", 
+     "dzie\:0144", " ", "Wielkanocy"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"day", "=", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"d", "+", "e"}], ")"}], ">", "9"}], ",", 
+      RowBox[{"(", 
+       RowBox[{"d", "+", "e", "-", "9"}], ")"}], ",", 
+      RowBox[{"(", 
+       RowBox[{"d", "+", "e", "+", "22"}], ")"}]}], "]"}]}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Definiujemy", " ", "zmienn\:0105", " ", "\"\<month\>\"", " ", "jako", 
+     " ", "miesi\:0105c", " ", "Wielkanocy"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"month", "=", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"d", "+", "e"}], ")"}], ">", "9"}], ",", "4", ",", "3"}], 
+     "]"}]}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Tworzymy", " ", "obiekt", " ", "daty", " ", "dla", " ", "wyniku"}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"DateObject", "[", 
+    RowBox[{"{", 
+     RowBox[{"2016", ",", "month", ",", "day"}], "}"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.889374887315228*^9, 3.8893748873202324`*^9}},
+ CellLabel->
+  "(Debug) In[45]:=",ExpressionUUID->"864a9a0d-3677-48c5-99ab-f99bca68101a"],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.8893748889297433`*^9},
+ CellLabel->
+  "(Debug) Out[45]=",ExpressionUUID->"dd157f02-2904-4655-949f-05f0d2bc7ca4"],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.889374888932744*^9},
+ CellLabel->
+  "(Debug) Out[46]=",ExpressionUUID->"f7dbd202-fca5-4537-859b-ee50f0d4fe72"],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.889374888935745*^9},
+ CellLabel->
+  "(Debug) Out[47]=",ExpressionUUID->"aa30efe4-d26f-4b34-a733-b1037e113462"],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.8893748889387455`*^9},
+ CellLabel->
+  "(Debug) Out[48]=",ExpressionUUID->"a8f06228-abae-40ea-954d-13eb27981524"],
+
+Cell[BoxData["3"], "Output",
+ CellChangeTimes->{3.8893748889407463`*^9},
+ CellLabel->
+  "(Debug) Out[49]=",ExpressionUUID->"c952d6cc-9669-497e-8517-1cf829a09cb9"],
+
+Cell[BoxData["27"], "Output",
+ CellChangeTimes->{3.8893748889437466`*^9},
+ CellLabel->
+  "(Debug) Out[50]=",ExpressionUUID->"f28f226f-56f9-48f7-92f4-ff9ecc486ceb"],
+
+Cell[BoxData["3"], "Output",
+ CellChangeTimes->{3.889374888947748*^9},
+ CellLabel->
+  "(Debug) Out[51]=",ExpressionUUID->"c38714b4-8518-448e-8f0a-bc3cf3a10485"],
+
+Cell[BoxData[
+ TemplateBox[{RowBox[{
+     StyleBox["\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+     "\"Sun 27 Mar 2016\""}],RowBox[{"DateObject", "[", 
+     RowBox[{
+       RowBox[{"{", 
+         RowBox[{"2016", ",", "3", ",", "27"}], "}"}], ",", "\"Day\"", ",", 
+       "\"Gregorian\"", ",", "2.`"}], "]"}]},
+  "DateObject",
+  Editable->False]], "Output",
+ CellChangeTimes->{3.889374888950748*^9},
+ CellLabel->
+  "(Debug) Out[52]=",ExpressionUUID->"377f5d9a-639b-4548-b5b3-14c5419b61b1"]
+}, Open  ]]
+},
+WindowSize->{759, 813},
+WindowMargins->{{Automatic, 572}, {64, Automatic}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 945, 20, 105, "Input",ExpressionUUID->"e9948fb3-a5b4-4280-8863-35b3448fe4da"],
+Cell[CellGroupData[{
+Cell[1528, 44, 1452, 47, 318, "Input",ExpressionUUID->"9a851fa0-4827-47ed-8ddf-723906de41e5"],
+Cell[2983, 93, 162, 3, 46, "Output",ExpressionUUID->"3d76cadb-e2e9-458e-8c43-2252a0565bf9"],
+Cell[3148, 98, 160, 3, 46, "Output",ExpressionUUID->"db2c789f-6a6d-4233-98cc-0ada8f1df986"],
+Cell[3311, 103, 160, 3, 46, "Output",ExpressionUUID->"825b972c-6991-4bb0-80fa-d25ddf9b14e8"],
+Cell[3474, 108, 160, 3, 46, "Output",ExpressionUUID->"2224fc17-57f0-4c1e-b20c-10e5cbb2f408"],
+Cell[3637, 113, 160, 3, 46, "Output",ExpressionUUID->"944dcef7-5e61-458f-8db8-16a834188ffd"],
+Cell[3800, 118, 163, 3, 46, "Output",ExpressionUUID->"45f10f92-bc56-4228-bdd3-1e2bb8b0b919"],
+Cell[3966, 123, 162, 3, 46, "Output",ExpressionUUID->"0513db2e-69b0-465e-9698-12eac121a1db"],
+Cell[4131, 128, 511, 12, 59, "Output",ExpressionUUID->"bf16a3c2-ea4e-41d7-97ea-2e421f8bacf7"]
+}, Open  ]],
+Cell[4657, 143, 346, 9, 28, "Input",ExpressionUUID->"9badb5a7-fb44-4f38-8e91-c32761e1ccfc"],
+Cell[CellGroupData[{
+Cell[5028, 156, 3289, 86, 584, "Input",ExpressionUUID->"864a9a0d-3677-48c5-99ab-f99bca68101a"],
+Cell[8320, 244, 162, 3, 46, "Output",ExpressionUUID->"dd157f02-2904-4655-949f-05f0d2bc7ca4"],
+Cell[8485, 249, 160, 3, 46, "Output",ExpressionUUID->"f7dbd202-fca5-4537-859b-ee50f0d4fe72"],
+Cell[8648, 254, 160, 3, 46, "Output",ExpressionUUID->"aa30efe4-d26f-4b34-a733-b1037e113462"],
+Cell[8811, 259, 162, 3, 46, "Output",ExpressionUUID->"a8f06228-abae-40ea-954d-13eb27981524"],
+Cell[8976, 264, 162, 3, 46, "Output",ExpressionUUID->"c952d6cc-9669-497e-8517-1cf829a09cb9"],
+Cell[9141, 269, 163, 3, 46, "Output",ExpressionUUID->"f28f226f-56f9-48f7-92f4-ff9ecc486ceb"],
+Cell[9307, 274, 160, 3, 46, "Output",ExpressionUUID->"c38714b4-8518-448e-8f0a-bc3cf3a10485"],
+Cell[9470, 279, 509, 12, 59, "Output",ExpressionUUID->"377f5d9a-639b-4548-b5b3-14c5419b61b1"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
