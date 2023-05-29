@@ -1,0 +1,1711 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     83997,       1701]
+NotebookOptionsPosition[     83565,       1685]
+NotebookOutlinePosition[     83908,       1700]
+CellTagsIndexPosition[     83865,       1697]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"DynamicModule", "[", 
+    RowBox[{
+     RowBox[{"{", "rr", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"rr", "=", 
+       RowBox[{"Flatten", "@", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "a", ",", "b", ",", "c", ",", "d", ",", "e", ",", "f", ",", "g", 
+            ",", "h"}], "}"}], ",", 
+          RowBox[{"{", "3", "}"}]}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Sound", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Flatten", "[", 
+          RowBox[{"#", ",", "1"}], "]"}], "&"}], "@", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"SoundNote", "[", 
+             RowBox[{"#", ",", ".25", ",", "\"\<Percussion\>\""}], "]"}], 
+            "&"}], "/@", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"x", ",", "y"}], "]"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"MapIndexed", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"SoundNote", "[", 
+              RowBox[{"#1", ",", 
+               RowBox[{"Flatten", "@", 
+                RowBox[{"{", 
+                 RowBox[{"#2", ",", 
+                  RowBox[{"#2", "+", 
+                   RowBox[{"First", "@", 
+                    RowBox[{"rr", "[", 
+                    RowBox[{"[", "#2", "]"}], "]"}]}]}]}], "}"}]}], ",", 
+               "Instruments"}], "]"}], "&"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "d1", ",", "d2", ",", "d3", ",", "d4", ",", "d5", ",", "d6", ",",
+               "d7", ",", "d8"}], "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"MapIndexed", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"SoundNote", "[", 
+              RowBox[{"#1", ",", 
+               RowBox[{"Flatten", "@", 
+                RowBox[{"{", 
+                 RowBox[{"#2", ",", 
+                  RowBox[{"#2", "+", 
+                   RowBox[{"First", "@", 
+                    RowBox[{"rr", "[", 
+                    RowBox[{"[", "#2", "]"}], "]"}]}]}]}], "}"}]}], ",", 
+               "Instruments2"}], "]"}], "&"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "e1", ",", "e2", ",", "e3", ",", "e4", ",", "e5", ",", "e6", ",",
+               "e7", ",", "e8"}], "}"}]}], "]"}]}], "}"}]}], "]"}]}]}], "]"}],
+    ",", "\[IndentingNewLine]", 
+   RowBox[{"Column", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Row", "[", 
+       RowBox[{"{", 
+        RowBox[{"\"\<sequence 1 notes \>\"", ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "d1", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "d2", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "d3", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "d4", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "d5", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "d6", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "d7", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "d8", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}]}], "}"}],
+        "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Row", "[", 
+       RowBox[{"{", 
+        RowBox[{"\"\<sequence 2 notes\>\"", ",", "\[IndentingNewLine]", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "e1", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "e2", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "e3", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "e4", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "e5", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "e6", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "e7", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"PopupMenu", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "e8", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"None", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"None", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"0", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"0", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"1", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"1", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"2", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"2", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"3", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"3", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"4", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"4", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"5", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"5", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"6", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"6", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"7", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"7", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"8", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"8", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"9", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"9", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"10", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"10", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"11", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"11", "/.", "n3"}], "]"}]}], ",", 
+             RowBox[{"12", "\[Rule]", 
+              RowBox[{"Dynamic", "[", 
+               RowBox[{"12", "/.", "n3"}], "]"}]}]}], "}"}]}], "]"}]}], "}"}],
+        "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Row", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Column", "[", 
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{"\"\<\>\"", ",", "\[IndentingNewLine]", 
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<note lengths\>\"", ",", "Bold"}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Control", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"a", ",", "1", ",", "\"\< 1st\>\""}], "}"}], ",", 
+                "0", ",", "5", ",", ".125", ",", "Slider", ",", 
+                RowBox[{"ImageSize", "\[Rule]", "Small"}]}], "}"}], "]"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"Control", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"b", ",", "1", ",", "\"\<2nd\>\""}], "}"}], ",", "0",
+                 ",", "5", ",", ".125", ",", "Slider", ",", 
+                RowBox[{"ImageSize", "\[Rule]", "Small"}]}], "}"}], "]"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"Control", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"c", ",", "1", ",", "\"\< 3rd\>\""}], "}"}], ",", 
+                "0", ",", "5", ",", ".125", ",", "Slider", ",", 
+                RowBox[{"ImageSize", "\[Rule]", "Small"}]}], "}"}], "]"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"Control", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"d", ",", "1", ",", "\"\< 4th\>\""}], "}"}], ",", 
+                "0", ",", "5", ",", ".125", ",", "Slider", ",", 
+                RowBox[{"ImageSize", "\[Rule]", "Small"}]}], "}"}], "]"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"Control", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"e", ",", "1", ",", "\"\< 5th\>\""}], "}"}], ",", 
+                "0", ",", "5", ",", ".125", ",", "Slider", ",", 
+                RowBox[{"ImageSize", "\[Rule]", "Small"}]}], "}"}], "]"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"Control", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"f", ",", "1", ",", "\"\< 6th\>\""}], "}"}], ",", 
+                "0", ",", "5", ",", ".125", ",", "Slider", ",", 
+                RowBox[{"ImageSize", "\[Rule]", "Small"}]}], "}"}], "]"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"Control", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"g", ",", "1", ",", "\"\< 7th\>\""}], "}"}], ",", 
+                "0", ",", "5", ",", ".125", ",", "Slider", ",", 
+                RowBox[{"ImageSize", "\[Rule]", "Small"}]}], "}"}], "]"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"Control", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"h", ",", "1", ",", "\"\< 8th\>\""}], "}"}], ",", 
+                "0", ",", "5", ",", ".125", ",", "Slider", ",", 
+                RowBox[{"ImageSize", "\[Rule]", "Small"}]}], "}"}], "]"}]}], 
+            "\[IndentingNewLine]", "}"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Column", "[", 
+           RowBox[{
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                  "x", ",", "1", ",", "\"\<number of percussion sounds\>\""}],
+                   "}"}], ",", "plist"}], "}"}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                  "y", ",", "0", ",", "\"\<number of percussion notes \>\""}],
+                   "}"}], ",", "plist2"}], "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                  "Instruments", ",", "\"\<Piano\>\"", ",", 
+                   "\"\<sequence 1 instrument\>\""}], "}"}], ",", 
+                 "instrumentlist", ",", 
+                 RowBox[{"ImageSize", "\[Rule]", "Small"}]}], "}"}], "]"}], 
+              ",", "\[IndentingNewLine]", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                  "Instruments2", ",", "\"\<Piano\>\"", ",", 
+                   "\"\<sequence 2 instrument\>\""}], "}"}], ",", 
+                 "instrumentlist", ",", 
+                 RowBox[{"ImageSize", "\[Rule]", "Small"}]}], "}"}], "]"}]}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"Alignment", "\[Rule]", "Left"}]}], "]"}]}], 
+         "\[IndentingNewLine]", "}"}], ",", "\"\<\\t  \>\"", ",", 
+        RowBox[{"FrameMargins", "\[Rule]", "10"}]}], "]"}]}], "}"}], "]"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"n3", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"None", "\[Rule]", "\"\<Rest\>\""}], ",", 
+         RowBox[{"0", "\[Rule]", "\"\<C\>\""}], ",", 
+         RowBox[{"1", "\[Rule]", "\"\<C#\>\""}], ",", 
+         RowBox[{"2", "\[Rule]", "\"\<D\>\""}], ",", 
+         RowBox[{"3", "\[Rule]", "\"\<D#\>\""}], ",", 
+         RowBox[{"4", "\[Rule]", "\"\<E\>\""}], ",", 
+         RowBox[{"5", "\[Rule]", "\"\<F\>\""}], ",", 
+         RowBox[{"6", "\[Rule]", "\"\<F#\>\""}], ",", 
+         RowBox[{"7", "\[Rule]", "\"\<G\>\""}], ",", 
+         RowBox[{"8", "\[Rule]", "\"\<G#\>\""}], ",", 
+         RowBox[{"9", "\[Rule]", "\"\<A\>\""}], ",", 
+         RowBox[{"10", "\[Rule]", "\"\<A#\>\""}], ",", 
+         RowBox[{"11", "\[Rule]", "\"\<B\>\""}], ",", 
+         RowBox[{"12", "\[Rule]", "\"\<C\>\""}]}], "}"}]}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", " ", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ControlPlacement", "\[Rule]", "Top"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Alignment", "\[Rule]", "Center"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"SaveDefinitions", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"AutorunSequencing", "\[Rule]", " ", 
+    RowBox[{"{", "1", "}"}]}]}], "]"}]], "Input",
+ CellLabel->
+  "(Debug) In[46]:=",ExpressionUUID->"598b8f6b-357a-4740-b735-5540b50f6a0d"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 1., $CellContext`b$$ = 
+    1, $CellContext`c$$ = 2.125, $CellContext`d$$ = 1, $CellContext`e$$ = 
+    1, $CellContext`f$$ = {
+    3, 3, 5, 5, 1, 1, 1, 1, 3, 3, 5, 5, 1, 1, 5, 5, 6, 6, 8, 8, 8, 8, 5, 5, 6,
+      6, 8, 8, 8, 8, 8, 10, 8, 6, 5, 5, 1, 1, 8, 10, 8, 6, 5, 5, 1, 1, 3, 3, 
+     Null, -4, -4, 1, 1, 1, 1}, $CellContext`g$$ = 1, $CellContext`h$$ = 
+    1, $CellContext`Instruments$$ = "Piano", $CellContext`Instruments2$$ = 
+    "Piano", $CellContext`n3$$ = {
+    None -> "Rest", 0 -> "C", 1 -> "C#", 2 -> "D", 3 -> "D#", 4 -> "E", 5 -> 
+     "F", 6 -> "F#", 7 -> "G", 8 -> "G#", 9 -> "A", 10 -> "A#", 11 -> "B", 12 -> 
+     "C"}, $CellContext`x$$ = 2, $CellContext`y$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`a$$], 1, " 1st"}, 0, 5, 0.125}, {{
+       Hold[$CellContext`b$$], 1, "2nd"}, 0, 5, 0.125}, {{
+       Hold[$CellContext`c$$], 1, " 3rd"}, 0, 5, 0.125}, {{
+       Hold[$CellContext`d$$], 1, " 4th"}, 0, 5, 0.125}, {{
+       Hold[$CellContext`e$$], 1, " 5th"}, 0, 5, 0.125}, {{
+       Hold[$CellContext`f$$], 1, " 6th"}, 0, 5, 0.125}, {{
+       Hold[$CellContext`g$$], 1, " 7th"}, 0, 5, 0.125}, {{
+       Hold[$CellContext`h$$], 1, " 8th"}, 0, 5, 0.125}, {{
+       Hold[$CellContext`x$$], 1, 
+       "number of percussion sounds"}, $CellContext`plist}, {{
+       Hold[$CellContext`y$$], 0, 
+       "number of percussion notes "}, $CellContext`plist2}, {{
+       Hold[$CellContext`Instruments$$], "Piano", 
+       "sequence 1 instrument"}, $CellContext`instrumentlist}, {{
+       Hold[$CellContext`Instruments2$$], "Piano", 
+       "sequence 2 instrument"}, $CellContext`instrumentlist}, {
+      Hold[
+       Column[{
+         Row[{"sequence 1 notes ", 
+           PopupMenu[
+            Dynamic[$CellContext`d1], {0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}], 
+           PopupMenu[
+            Dynamic[$CellContext`d2], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}], 
+           PopupMenu[
+            Dynamic[$CellContext`d3], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}], 
+           PopupMenu[
+            Dynamic[$CellContext`d4], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}], 
+           PopupMenu[
+            Dynamic[$CellContext`d5], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}], 
+           PopupMenu[
+            Dynamic[$CellContext`d6], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}], 
+           PopupMenu[
+            Dynamic[$CellContext`d7], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}], 
+           PopupMenu[
+            Dynamic[$CellContext`d8], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}]}], 
+         Row[{"sequence 2 notes", 
+           PopupMenu[
+            Dynamic[$CellContext`e1], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}], 
+           PopupMenu[
+            Dynamic[$CellContext`e2], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}], 
+           PopupMenu[
+            Dynamic[$CellContext`e3], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}], 
+           PopupMenu[
+            Dynamic[$CellContext`e4], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}], 
+           PopupMenu[
+            Dynamic[$CellContext`e5], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}], 
+           PopupMenu[
+            Dynamic[$CellContext`e6], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}], 
+           PopupMenu[
+            Dynamic[$CellContext`e7], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}], 
+           PopupMenu[
+            Dynamic[$CellContext`e8], {None -> Dynamic[
+               ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+               ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+               ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+               ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+               ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+               ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+               ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+               ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+               ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+               ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+               ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+               ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+               ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+               ReplaceAll[12, $CellContext`n3$$]]}]}], 
+         Row[{
+           Column[{"", 
+             Style["note lengths", Bold], 
+             Manipulate`Place[1], 
+             Manipulate`Place[2], 
+             Manipulate`Place[3], 
+             Manipulate`Place[4], 
+             Manipulate`Place[5], 
+             Manipulate`Place[6], 
+             Manipulate`Place[7], 
+             Manipulate`Place[8]}], 
+           Column[{
+             Manipulate`Place[9], 
+             Manipulate`Place[10], 
+             Manipulate`Place[11], 
+             Manipulate`Place[12]}, Alignment -> Left]}, "\t  ", FrameMargins -> 
+          10]}]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`n3$$], {
+       None -> "Rest", 0 -> "C", 1 -> "C#", 2 -> "D", 3 -> "D#", 4 -> "E", 5 -> 
+        "F", 6 -> "F#", 7 -> "G", 8 -> "G#", 9 -> "A", 10 -> "A#", 11 -> "B", 
+        12 -> "C"}}}}, Typeset`size$$ = {250., {55., 60.}}, Typeset`update$$ =
+     0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`a$24826$$ = 0, $CellContext`b$24827$$ = 
+    0, $CellContext`c$24828$$ = 0, $CellContext`d$24829$$ = 
+    0, $CellContext`e$24830$$ = 0, $CellContext`f$24831$$ = 
+    0, $CellContext`g$24832$$ = 0, $CellContext`h$24833$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     2, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 1, $CellContext`b$$ = 
+        1, $CellContext`c$$ = 1, $CellContext`d$$ = 1, $CellContext`e$$ = 
+        1, $CellContext`f$$ = 1, $CellContext`g$$ = 1, $CellContext`h$$ = 
+        1, $CellContext`Instruments$$ = "Piano", $CellContext`Instruments2$$ = 
+        "Piano", $CellContext`n3$$ = {
+         None -> "Rest", 0 -> "C", 1 -> "C#", 2 -> "D", 3 -> "D#", 4 -> "E", 
+          5 -> "F", 6 -> "F#", 7 -> "G", 8 -> "G#", 9 -> "A", 10 -> "A#", 11 -> 
+          "B", 12 -> "C"}, $CellContext`x$$ = 1, $CellContext`y$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$24826$$, 0], 
+        Hold[$CellContext`b$$, $CellContext`b$24827$$, 0], 
+        Hold[$CellContext`c$$, $CellContext`c$24828$$, 0], 
+        Hold[$CellContext`d$$, $CellContext`d$24829$$, 0], 
+        Hold[$CellContext`e$$, $CellContext`e$24830$$, 0], 
+        Hold[$CellContext`f$$, $CellContext`f$24831$$, 0], 
+        Hold[$CellContext`g$$, $CellContext`g$24832$$, 0], 
+        Hold[$CellContext`h$$, $CellContext`h$24833$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      DynamicModule[{$CellContext`rr}, $CellContext`rr = Flatten[
+           
+           Table[{$CellContext`a$$, $CellContext`b$$, $CellContext`c$$, \
+$CellContext`d$$, $CellContext`e$$, $CellContext`f$$, $CellContext`g$$, \
+$CellContext`h$$}, {3}]]; Sound[
+          (Flatten[#, 1]& )[{
+            Map[SoundNote[#, 0.25, "Percussion"]& , 
+             RandomInteger[$CellContext`x$$, $CellContext`y$$]], 
+            MapIndexed[SoundNote[#, 
+              Flatten[{#2, #2 + First[
+                  
+                  Part[$CellContext`rr, #2]]}], $CellContext`Instruments$$]& \
+, {$CellContext`d1, $CellContext`d2, $CellContext`d3, $CellContext`d4, \
+$CellContext`d5, $CellContext`d6, $CellContext`d7, $CellContext`d8}], 
+            MapIndexed[SoundNote[#, 
+              Flatten[{#2, #2 + First[
+                  
+                  Part[$CellContext`rr, #2]]}], $CellContext`Instruments2$$]& \
+, {$CellContext`e1, $CellContext`e2, $CellContext`e3, $CellContext`e4, \
+$CellContext`e5, $CellContext`e6, $CellContext`e7, $CellContext`e8}]}]]], 
+      "Specifications" :> {{{$CellContext`a$$, 1, " 1st"}, 0, 5, 0.125, 
+         ControlType -> Slider, ImageSize -> Small, ControlPlacement -> 
+         1}, {{$CellContext`b$$, 1, "2nd"}, 0, 5, 0.125, ControlType -> 
+         Slider, ImageSize -> Small, ControlPlacement -> 
+         2}, {{$CellContext`c$$, 1, " 3rd"}, 0, 5, 0.125, ControlType -> 
+         Slider, ImageSize -> Small, ControlPlacement -> 
+         3}, {{$CellContext`d$$, 1, " 4th"}, 0, 5, 0.125, ControlType -> 
+         Slider, ImageSize -> Small, ControlPlacement -> 
+         4}, {{$CellContext`e$$, 1, " 5th"}, 0, 5, 0.125, ControlType -> 
+         Slider, ImageSize -> Small, ControlPlacement -> 
+         5}, {{$CellContext`f$$, 1, " 6th"}, 0, 5, 0.125, ControlType -> 
+         Slider, ImageSize -> Small, ControlPlacement -> 
+         6}, {{$CellContext`g$$, 1, " 7th"}, 0, 5, 0.125, ControlType -> 
+         Slider, ImageSize -> Small, ControlPlacement -> 
+         7}, {{$CellContext`h$$, 1, " 8th"}, 0, 5, 0.125, ControlType -> 
+         Slider, ImageSize -> Small, ControlPlacement -> 
+         8}, {{$CellContext`x$$, 1, 
+          "number of percussion sounds"}, $CellContext`plist, 
+         ControlPlacement -> 
+         9}, {{$CellContext`y$$, 0, 
+          "number of percussion notes "}, $CellContext`plist2, 
+         ControlPlacement -> 
+         10}, {{$CellContext`Instruments$$, "Piano", 
+          "sequence 1 instrument"}, $CellContext`instrumentlist, ImageSize -> 
+         Small, ControlPlacement -> 
+         11}, {{$CellContext`Instruments2$$, "Piano", 
+          "sequence 2 instrument"}, $CellContext`instrumentlist, ImageSize -> 
+         Small, ControlPlacement -> 12}, 
+        Column[{
+          Row[{"sequence 1 notes ", 
+            PopupMenu[
+             Dynamic[$CellContext`d1], {0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}], 
+            PopupMenu[
+             Dynamic[$CellContext`d2], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}], 
+            PopupMenu[
+             Dynamic[$CellContext`d3], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}], 
+            PopupMenu[
+             Dynamic[$CellContext`d4], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}], 
+            PopupMenu[
+             Dynamic[$CellContext`d5], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}], 
+            PopupMenu[
+             Dynamic[$CellContext`d6], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}], 
+            PopupMenu[
+             Dynamic[$CellContext`d7], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}], 
+            PopupMenu[
+             Dynamic[$CellContext`d8], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}]}], 
+          Row[{"sequence 2 notes", 
+            PopupMenu[
+             Dynamic[$CellContext`e1], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}], 
+            PopupMenu[
+             Dynamic[$CellContext`e2], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}], 
+            PopupMenu[
+             Dynamic[$CellContext`e3], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}], 
+            PopupMenu[
+             Dynamic[$CellContext`e4], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}], 
+            PopupMenu[
+             Dynamic[$CellContext`e5], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}], 
+            PopupMenu[
+             Dynamic[$CellContext`e6], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}], 
+            PopupMenu[
+             Dynamic[$CellContext`e7], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}], 
+            PopupMenu[
+             Dynamic[$CellContext`e8], {None -> Dynamic[
+                ReplaceAll[None, $CellContext`n3$$]], 0 -> Dynamic[
+                ReplaceAll[0, $CellContext`n3$$]], 1 -> Dynamic[
+                ReplaceAll[1, $CellContext`n3$$]], 2 -> Dynamic[
+                ReplaceAll[2, $CellContext`n3$$]], 3 -> Dynamic[
+                ReplaceAll[3, $CellContext`n3$$]], 4 -> Dynamic[
+                ReplaceAll[4, $CellContext`n3$$]], 5 -> Dynamic[
+                ReplaceAll[5, $CellContext`n3$$]], 6 -> Dynamic[
+                ReplaceAll[6, $CellContext`n3$$]], 7 -> Dynamic[
+                ReplaceAll[7, $CellContext`n3$$]], 8 -> Dynamic[
+                ReplaceAll[8, $CellContext`n3$$]], 9 -> Dynamic[
+                ReplaceAll[9, $CellContext`n3$$]], 10 -> Dynamic[
+                ReplaceAll[10, $CellContext`n3$$]], 11 -> Dynamic[
+                ReplaceAll[11, $CellContext`n3$$]], 12 -> Dynamic[
+                ReplaceAll[12, $CellContext`n3$$]]}]}], 
+          Row[{
+            Column[{"", 
+              Style["note lengths", Bold], 
+              Manipulate`Place[1], 
+              Manipulate`Place[2], 
+              Manipulate`Place[3], 
+              Manipulate`Place[4], 
+              Manipulate`Place[5], 
+              Manipulate`Place[6], 
+              Manipulate`Place[7], 
+              Manipulate`Place[8]}], 
+            Column[{
+              Manipulate`Place[9], 
+              Manipulate`Place[10], 
+              Manipulate`Place[11], 
+              Manipulate`Place[12]}, Alignment -> Left]}, "\t  ", 
+           FrameMargins -> 10]}], {{$CellContext`n3$$, {
+          None -> "Rest", 0 -> "C", 1 -> "C#", 2 -> "D", 3 -> "D#", 4 -> "E", 
+           5 -> "F", 6 -> "F#", 7 -> "G", 8 -> "G#", 9 -> "A", 10 -> "A#", 11 -> 
+           "B", 12 -> "C"}}, ControlType -> None}}, 
+      "Options" :> {
+       ControlPlacement -> Top, Alignment -> Center, 
+        AutorunSequencing -> {1}}, "DefaultOptions" :> {}],
+     ImageSizeCache->{580., {220., 226.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`f$$ = {
+        3, 3, 5, 5, 1, 1, 1, 1, 3, 3, 5, 5, 1, 1, 5, 5, 6, 6, 8, 8, 8, 8, 5, 
+         5, 6, 6, 8, 8, 8, 8, 8, 10, 8, 6, 5, 5, 1, 1, 8, 10, 8, 6, 5, 5, 1, 
+         1, 3, 3, Null, -4, -4, 1, 1, 1, 1}}; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.88877274710579*^9},
+ CellLabel->
+  "(Debug) Out[46]=",ExpressionUUID->"6d26135d-5e8f-4205-82d8-5695b7a76575"]
+}, Open  ]]
+},
+WindowSize->{759, 813},
+WindowMargins->{{Automatic, 572}, {64, Automatic}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 42505, 970, 4390, "Input",ExpressionUUID->"598b8f6b-357a-4740-b735-5540b50f6a0d"],
+Cell[43088, 994, 40461, 688, 512, "Output",ExpressionUUID->"6d26135d-5e8f-4205-82d8-5695b7a76575"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
