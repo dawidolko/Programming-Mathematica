@@ -1,0 +1,7 @@
+1. Orbita księżyca i ziemi na wykresie 3d i obliczenia okresu orbitalnego, półosi i półosi małej.
+2. Ruch asteroidy w polu grawitacyjnym słońca, wykres 3d.
+3. Symulacja cząstek elementarnych w przestrzeni trójwymiarowej.
+4. Obliczenia odległości wszystkich planet od słońca i przedstawienie tego na wykresie 3d.
+5. Badanie wpływu sił grawitacyjnych na ruch planet
+6. Symulowanie efektów falowych w Kosmosie
+7. Symulowanie zachowania czarnej dziury
