@@ -13,6 +13,7 @@ Mathemica to potężny język programowania i środowisko obliczeniowe, stworzon
 /Courses: Tutaj znajdują się różnego rodzaju materiały edukacyjne, takie jak prezentacje, tutoriale, dokumentacja i artykuły związane z Mathemica.
 
 ## **Jak zacząć:**
+
 Sklonuj repozytorium na swój lokalny komputer:
 ```
 git clone https://github.com/dawidolko/Programming-mathematica.git
