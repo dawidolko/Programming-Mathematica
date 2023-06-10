@@ -22,7 +22,7 @@ W projekcie użyto również funkcji do inicjalizacji wartości przed uruchomien
  
 Dokumentacja ta opisuje strukturę i funkcje użyte w projekcie, który składa się z dwóch części: wykresu 3D orbity Księżyca wokół Ziemi oraz animacji ruchu Marsa na tle gwiazd widziany z Ziemi.
 
-![projekt](Projekt o orbitach/projekt.gif)
+![projekt](projekt.gif)
 
 
 # Główne funkcje użyte w projekcie
