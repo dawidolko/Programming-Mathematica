@@ -1,4 +1,4 @@
-# **Programming-mathematica**
+# **Programming-Mathematica**
 
 ### **Mathemica**
 
