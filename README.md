@@ -2,34 +2,34 @@
 
 ### **Mathemica**
 
-## **Opis:**
-Mathemica to potężny język programowania i środowisko obliczeniowe, stworzone specjalnie do manipulacji matematycznymi obliczeniami i rozwiązywania problemów z dziedziny nauk ścisłych. Repozytorium to zawiera przykładowe projekty, skrypty i materiały edukacyjne związane z Mathemica.
+## **Description:**
+Mathemica is a powerful programming language and computing environment, specifically designed for manipulating mathematical calculations and solving science problems. This repository contains sample projects, scripts, and educational materials related to Mathemica.
 
-## **Struktura Repozytorium:**
-/Projects: Ten folder zawiera różne projekty, w których wykorzystuje się język Mathemica. Każdy projekt posiada swój własny folder z opisem i kodem źródłowym.
+## **Repository Structure:**
+/Projects: This folder contains various projects that use Mathemica. Each project has its own folder with description and source code.
 
-/Lab: W tym folderze znajdują się przydatne skrypty i narzędzia programistyczne, które mogą ułatwić pracę z Mathemica.
+/Lab: This folder contains useful scripts and development tools that can make working with Mathemica easier.
 
-/Courses: Tutaj znajdują się różnego rodzaju materiały edukacyjne, takie jak prezentacje, tutoriale, dokumentacja i artykuły związane z Mathemica.
+/Courses: This is where you find all sorts of educational materials, such as presentations, tutorials, documentation, and articles related to Mathemica.
 
-## **Jak zacząć:**
+## **How ​​to start:**
 
-Sklonuj repozytorium na swój lokalny komputer:
+Clone the repository to your local computer:
 ```
 git clone https://github.com/dawidolko/Programming-mathematica.git
 ```
 
-Przeglądaj dostępne projekty, skrypty i materiały w odpowiednich folderach.
+Browse available projects, scripts and materials in their respective folders.
 
-Wypróbuj kod źródłowy i eksperymentuj z Mathemica na podstawie dostępnych przykładów.
+Try the source code and experiment with Mathemica based on the available examples.
 
-## **Wymagania systemowe**
-Aby korzystać z Mathemica, potrzebujesz zainstalowanego oprogramowania Wolfram Mathematica na swoim komputerze. Możesz go pobrać ze strony Wolfram Research.
+## **System requirements**
+To use Mathemica, you need the Wolfram Mathematica software installed on your computer. You can download it from the Wolfram Research website.
 
-## **Wkład i Wsparcie**
-Jeśli chcesz przyczynić się do tego repozytorium, możesz zgłaszać problemy, tworzyć pull requesty lub udostępniać swoje własne projekty, które wykorzystują język Mathemica. Wszelkie wkłady są mile widziane!
+## **Contributions and Support**
+If you want to contribute to this repository, you can report issues, create pull requests, or share your own projects that use Mathemica. Any contributions are welcome!
 
-Jeśli masz pytania lub potrzebujesz pomocy, możesz skontaktować się ze mną poprzez e-mail lub przez platformę GitHub.
+If you have questions or need help, you can contact me via email or GitHub.
 
-# **Licencja**
-Ten projekt jest objęty licencją MIT. Zapraszam do zapoznania się z pełnym tekstem licencji przed korzystaniem z tego repozytorium.
+# **License**
+This project is licensed under the MIT license. Please read the full license text before using this repository.
